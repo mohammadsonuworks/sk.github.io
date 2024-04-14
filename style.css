@@ -6510,6 +6510,7 @@ Footer Styles
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
+  justify-content: center;
   -webkit-flex-wrap: wrap;
   -moz-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
