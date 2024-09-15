@@ -4205,6 +4205,7 @@ Service Area
   -moz-flex-shrink: 100;
   -ms-flex-negative: 100;
   flex-shrink: 100;
+  text-align: center;
 }
 .service__content h5 {
   text-transform: uppercase;
@@ -6789,4 +6790,16 @@ Footer Styles
   .footer--widgets .widget-contact-info {
     padding-right: 0;
   }
+}
+
+.random-class-1435 {
+  width: 100%;
+  border-radius: 0;
+  font-weight: bold;
+  padding: 1rem;
+  background-color: #333982;
+}
+
+.random-class-1435:hover {
+  background-color: darkblue;
 }
