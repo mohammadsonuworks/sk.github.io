@@ -150,7 +150,7 @@
 
   /* Fake Loader */
   $(".fakeloader").fakeLoader({
-    timeToHide: 1200,
+    timeToHide: 500,
     bgColor: "rgba(225,225,225,0.95)",
     spinner: "spinner2",
   });
