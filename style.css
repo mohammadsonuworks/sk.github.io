@@ -4163,6 +4163,7 @@ Service Area
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
+  justify-content: center;
   margin-top: 30px;
   padding: 15px;
   padding: 25px 15px;
@@ -6510,11 +6511,12 @@ Footer Styles
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   -webkit-flex-wrap: wrap;
   -moz-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  justify-content: space-between;
   /* Widget About */
   /* Widget Quick Links */
   /* Widget Twitterfeed */
