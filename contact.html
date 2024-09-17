@@ -40,7 +40,7 @@
     <script type="text/javascript">
       (function () {
         emailjs.init({
-          publicKey: "glq1HEfFy3gX8rN7x",
+          publicKey: "mp7ilHVg8e7xOiv31",
         });
       })();
     </script>
@@ -208,6 +208,7 @@
                                 name="name"
                                 id="name"
                                 placeholder="Name"
+                                required
                               />
                             </div>
                           </div>
@@ -218,6 +219,7 @@
                                 name="email"
                                 id="email"
                                 placeholder="Email"
+                                required
                               />
                             </div>
                           </div>
@@ -238,6 +240,7 @@
                                 name="phone"
                                 id="phone"
                                 placeholder="Phone"
+                                required
                               />
                             </div>
                           </div>
@@ -246,15 +249,32 @@
                               <textarea
                                 name="message"
                                 cols="30"
-                                rows="5"
+                                rows="2"
                                 placeholder="Message"
                               ></textarea>
                             </div>
                           </div>
+                          <div
+                            style="
+                              background-color: #00ac1f;
+                              width: 100%;
+                              margin-top: 2rem;
+                              justify-content: center;
+                              align-items: center;
+                              color: white;
+                              display: none;
+                            "
+                            id="form_submission_done_div"
+                          >
+                            <p style="margin-top: 10px">
+                              Thank you for submitting form. We will contact you
+                              soon.
+                            </p>
+                          </div>
                           <div class="col-lg-12">
                             <div class="single-input button text-left">
                               <button type="submit" class="cr-btn">
-                                <span>Submit</span>
+                                <span id="submit_button_span">Submit</span>
                               </button>
                             </div>
                           </div>
@@ -706,16 +726,23 @@
         document
           .getElementById("contact-form")
           .addEventListener("submit", function (event) {
-            alert("Form submitted");
-            return;
             console.log(event);
             event.preventDefault();
-            emailjs.sendForm("service_5yrhksn", "template_z2ezhd1", this).then(
+            document.getElementById("submit_button_span").innerText =
+              "Submitting ...";
+            emailjs.sendForm("service_5daeomn", "template_pknox2t", this).then(
               () => {
                 console.log("SUCCESS!");
+                document.getElementById(
+                  "form_submission_done_div"
+                ).style.display = "flex";
+                document.getElementById("submit_button_span").innerText =
+                  "Submit";
               },
               (error) => {
                 console.log("FAILED...", error);
+                document.getElementById("submit_button_span").innerText =
+                  "Submit";
               }
             );
           });
