@@ -106,8 +106,19 @@
               </div>
 
               <!-- Main Navigation -->
-              <nav id="main-navigation" class="header__menu main-navigation">
-                <ul>
+              <nav
+                id="main-navigation"
+                class="header__menu main-navigation"
+                style="flex-grow: 1"
+              >
+                <ul
+                  style="
+                    width: 100%;
+                    display: flex;
+                    gap: 3rem;
+                    margin-left: 8rem;
+                  "
+                >
                   <li>
                     <a href="index.html">HOME</a>
                   </li>
@@ -695,6 +706,8 @@
         document
           .getElementById("contact-form")
           .addEventListener("submit", function (event) {
+            alert("Form submitted");
+            return;
             console.log(event);
             event.preventDefault();
             emailjs.sendForm("service_5yrhksn", "template_z2ezhd1", this).then(
