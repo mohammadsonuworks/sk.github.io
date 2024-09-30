@@ -6803,3 +6803,17 @@ Footer Styles
 .random-class-1435:hover {
   background-color: darkblue;
 }
+
+.main-navigation-ul {
+  width: 100%;
+  display: flex;
+  gap: 3rem;
+  margin-left: 8rem;
+}
+
+@media only screen and (max-width: 991px) {
+  /* Styles for screens 991px or less */
+  .main-navigation-ul {
+    display: block;
+  }
+}
