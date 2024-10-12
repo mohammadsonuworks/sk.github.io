@@ -6804,6 +6804,16 @@ Footer Styles
   background-color: darkblue;
 }
 
+.service__enquire__btn {
+  width: 100%;
+  background-color: #00ac1f;
+  color: white;
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 0;
+  margin-top: 1rem;
+}
+
 .main-navigation-ul {
   width: 100%;
   display: flex;
@@ -6816,4 +6826,22 @@ Footer Styles
   .main-navigation-ul {
     display: block;
   }
+
+  .home_page_services_link {
+    text-align: center;
+  }
+
+  .home_page_services_content {
+    text-align: center;
+  }
+}
+
+.footer-cert-div {
+  color: #00ac1f;
+  font-weight: bold;
+}
+
+.footer-contact-us {
+  color: #00ac1f !important;
+  font-weight: bold;
 }
